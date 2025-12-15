@@ -72,6 +72,28 @@
     #dateModalContent { background: white; padding: 2rem; border-radius: 20px; text-align: center; }
     #dateModalContent input { font-size: 1.2rem; padding: 0.5rem; border-radius: 8px; border: 1px solid #ccc; }
     #dateModalContent button { margin-top: 1rem; padding: 0.5rem 1rem; font-size: 1rem; border-radius: 10px; border: none; background-color: #ff3b30; color: white; cursor: pointer; }
+
+    /* Responsive adjustments for small screens */
+    @media (max-width: 400px) {
+      .container {
+        padding: 2rem 1.5rem;
+        width: 90%;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .slots {
+        font-size: 1.4rem;
+        letter-spacing: 0.3rem;
+      }
+      input[type=text] {
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+      }
+      #passDisplay, #liarMessage, #secretMessage {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
