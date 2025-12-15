@@ -103,7 +103,7 @@
   </div>
 
   <script>
-    const correctPassword = "LUNAR LANDER";
+    const correctBase64 = btoa('LUNAR LANDER');
     let clickTimes = [];
     let titleClickTimes = [];
     let liarDay = 25;
@@ -145,15 +145,10 @@
       const today = new Date();
       const liarDate = new Date(today.getFullYear(), 11, liarDay);
 
-      if (value === correctPassword) {
+      if (btoa(value) === correctBase64) {
         confirmationEl.style.display = 'block';
-        // Show LIAR/Merry Christmas only if checkbox is checked
         if (checkBox.checked) {
-          if (today >= liarDate) {
-            liarEl.textContent = 'Merry Christmas';
-          } else {
-            liarEl.textContent = 'LIAR';
-          }
+          liarEl.textContent = (today >= liarDate) ? 'Merry Christmas' : 'LIAR';
           liarEl.style.display = 'block';
         } else {
           liarEl.style.display = 'none';
